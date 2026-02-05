@@ -459,7 +459,7 @@
         <div class="notes-editor" id="notesEditor" contenteditable="true"></div>
         <div class="notes-actions">
             <button class="btn" onclick="backFromNotes()">← Back</button>
-            <button class="notes-save-btn" onclick="saveNotes()">Save Notes</button>
+            <button class="notes-save-btn" onclick="saveNotes(event)">Save Notes</button>
         </div>
     </div>
 
@@ -581,7 +581,7 @@
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
-                        'X--Key': '$2b$10$ZqJQ3h5kGxH6X7YvN8qH0uKjPzLqVxL5YqJ7nJHqKjH6X7YvN8qH0u'
+                        'X-Master-Key': '$2a$10$yDMkqhTyQyoxzYGivdcatO2uAqKs5CwW4TQUrgtKnKFVd9RxF91Si'
                     },
                     body: JSON.stringify(data)
                 });
@@ -945,7 +945,7 @@
             document.getElementById('notesEditor').innerHTML = existingNotes;
         }
 
-        function saveNotes() {
+        function saveNotes(event) {
             const content = document.getElementById('notesEditor').innerHTML;
             notes[currentNotePath] = content;
             save();
