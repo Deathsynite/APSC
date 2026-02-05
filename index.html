@@ -109,7 +109,7 @@
         .card-icon { font-size: 1.5rem; margin-bottom: 20px; color: var(--text-muted); transition: color 0.4s; }
         .card-title { font-size: 1rem; font-weight: 600; color: var(--text-main); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; text-align: center; width: 90%; }
         
-        /* MASTERY STATS */
+        /* Y STATS */
         .stat-bar-container {
             width: 100%; height: 4px; background: #222; display: flex; margin-bottom: 15px; position: relative; z-index: 2;
         }
@@ -124,7 +124,7 @@
         }
         .status-due { color: var(--accent-red); text-shadow: 0 0 10px rgba(207, 102, 121, 0.3); }
         .status-done { color: var(--accent-green); }
-        .mastery-score { color: var(--highlight); font-weight: bold; margin-top: 5px; }
+        .y-score { color: var(--highlight); font-weight: bold; margin-top: 5px; }
 
         /* --- STATISTICS DASHBOARD --- */
         #statsView {
@@ -581,7 +581,7 @@
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
-                        'X-Master-Key': '$2b$10$ZqJQ3h5kGxH6X7YvN8qH0uKjPzLqVxL5YqJ7nJHqKjH6X7YvN8qH0u'
+                        'X--Key': '$2b$10$ZqJQ3h5kGxH6X7YvN8qH0uKjPzLqVxL5YqJ7nJHqKjH6X7YvN8qH0u'
                     },
                     body: JSON.stringify(data)
                 });
@@ -602,7 +602,7 @@
             try {
                 const response = await fetch(`https://api.jsonbin.io/v3/b/${userKey}/latest`, {
                     headers: {
-                        'X-Master-Key': '$2b$10$ZqJQ3h5kGxH6X7YvN8qH0uKjPzLqVxL5YqJ7nJHqKjH6X7YvN8qH0u'
+                        'X-Master-Key': '$2a$10$yDMkqhTyQyoxzYGivdcatO2uAqKs5CwW4TQUrgtKnKFVd9RxF91Si'
                     }
                 });
                 
@@ -646,7 +646,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'X-Master-Key': '$2b$10$ZqJQ3h5kGxH6X7YvN8qH0uKjPzLqVxL5YqJ7nJHqKjH6X7YvN8qH0u'
+                        'X-Master-Key': '$2a$10$yDMkqhTyQyoxzYGivdcatO2uAqKs5CwW4TQUrgtKnKFVd9RxF91Si'
                     },
                     body: JSON.stringify(initialData)
                 });
